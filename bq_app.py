@@ -46,17 +46,17 @@ def main():
         cname = st.radio("Select one of the options:",["SPDR", "Vanguard", "iShares"], index=None)
         if cname == "SPDR":
             query = (
-                    "SELECT * FROM `aviapi.mydata1.etfs` "  
+                    "SELECT * FROM `your-table` "  
                     "WHERE company = 'SPDR'"
                     )
         elif cname == "Vanguard":
             query = (
-                    "SELECT * FROM `aviapi.mydata1.etfs` "  
+                    "SELECT * FROM `your-table` "  
                     "WHERE company = 'Vanguard'"
                     )
         elif cname == "iShares":
             query = (
-                    "SELECT * FROM `aviapi.mydata1.etfs` "  
+                    "SELECT * FROM `your-table` "  
                     "WHERE company = 'iShares'"
                     )
         if not cname: st.stop()
@@ -75,5 +75,5 @@ def main():
 
 if __name__ == '__main__':
     page_setup()
-    FUNCTION_URL = "https://run-bigquery-query-bfgid64fta-uc.a.run.app"
+    FUNCTION_URL = "" #plug in your function url
     main()
